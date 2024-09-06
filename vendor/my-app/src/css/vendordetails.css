@@ -1,0 +1,192 @@
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E5F2F7; /* Background color */
+}
+
+.vendor-details-container {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 90%; /* Ensure it does not exceed viewport width */
+  max-width: 900px; /* Set a maximum width for larger screens */
+}
+
+.vendor-image-container {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+  border: 2px solid #ccc; /* Border around image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background for no image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.6s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.vendor-image-container:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+
+.vendor-image-container:hover .vendor-image {
+  opacity: 1; /* Ensure full opacity on hover */
+}
+
+.vendor-image-container::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px; /* Adjust icon size to be very small */
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.vendor-image-container:hover::before {
+  opacity: 1;
+}
+
+.vendor-info-container {
+  padding: 20px;
+  flex: 1;
+  max-width: calc(100% - 320px); /* Adjust according to image width to ensure fit */
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.vendor-info-container h1 {
+  margin-top: 0;
+}
+
+.vendor-info-container .form-group {
+  margin-bottom: 20px;
+}
+
+.vendor-info-container .form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.vendor-info-container .form-group input,
+.vendor-info-container .form-group textarea {
+  background-color: #e0e0e0;
+  border: 1px solid #3a9c9f;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.vendor-info-container .form-group input::placeholder,
+.vendor-info-container .form-group textarea::placeholder {
+  color: #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.vendor-info-container .form-group input:focus::placeholder,
+.vendor-info-container .form-group textarea:focus::placeholder {
+  color: #aaa;
+  transform: translateY(-10px);
+  font-size: 12px;
+}
+
+.vendor-info-container button {
+  border: none;
+  background-color: #3a9c9f;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-info-container button span {
+  transition: all 0.3s ease-in-out;
+}
+
+.vendor-info-container button:hover span {
+  transform: scale(1.1);
+}
+
+.vendor-info-container button:active {
+  transform: scale(0.95);
+}
+
+.vendor-info-container button:focus {
+  outline: none;
+}
+
+.vendor-info-container button.ghost {
+  background-color: transparent;
+  border: 1px solid #3a9c9f;
+  color: #3a9c9f;
+}
+
+.vendor-info-container button span.placeholder {
+  color: #66d9ef;
+}
+
+.vendor-info-container button:hover span.placeholder {
+  color: #4db8e5;
+}
+
+.vendor-info-container .error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: center;
+  width: 100%;
+  min-height: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: height 0.3s ease-in-out;
+}
+
+.vendor-info-container .success-message {
+  color: #5bc0de;
+  font-size: 14px;
+  margin: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .vendor-details-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vendor-image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .vendor-info-container {
+    max-width: 100%;
+  }
+}
+
+/* Highlight input fields with errors */
+.vendor-info-container .form-group.error input,
+.vendor-info-container .form-group.error textarea {
+  border-color: #d9534f; /* Red border for error */
+  background-color: #f2dede; /* Light red background for error */
+}

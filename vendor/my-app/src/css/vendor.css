@@ -1,0 +1,279 @@
+/* Scoped Container Styles */
+.vendor-list {
+  width: 80%;
+  height: 100%;
+  
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #E5F2F7;
+}
+.vendor-list-container {
+  max-height: none;
+  max-width: none; /* Removes any max-width restriction */
+}
+/* Title Styles */
+.vendor-list .title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Search Input Container Styles */
+.vendor-list .search-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.vendor-list .search-input {
+  background-color: #e0e0e0;
+  border: 1px solid #3a9c9f;
+  padding: 12px 15px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+}
+
+.vendor-list .search-input::placeholder {
+  color: #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.vendor-list .search-input:focus::placeholder {
+  color: #aaa;
+  transform: translateY(-10px);
+  font-size: 12px;
+}
+
+.vendor-list .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  background-color: #e0e0e0;
+  border: 1px solid #3a9c9f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  pointer-events: auto;
+}
+
+.vendor-list .dropdown-menu li {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+.vendor-list .dropdown-menu li:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.vendor-list .search-input:focus + .dropdown-menu,
+.vendor-list .search-input-container.show .dropdown-menu {
+  display: block;
+}
+
+/* Search Button Styles */
+.vendor-list .search-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Sort Selection Styles */
+.vendor-list .sort-selection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.vendor-list .sort-selection select {
+  background-color: #e0e0e0;
+  border: 1px solid #3a9c9f;
+  padding: 12px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  width: 300px;
+}
+
+.vendor-list .sort-selection select:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Pagination Controls Styles */
+.vendor-list .pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.vendor-list .pagination-controls button {
+  background-color: #e0e0e0;
+  border: 1px solid #3a9c9f;
+  padding: 12px 15px;
+  margin: 0 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.vendor-list .pagination-controls button:hover {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.vendor-list .pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Vendor Cards Styles */
+.vendor-list .vendor-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  transition: all 0.6s ease-in-out;
+}
+
+.vendor-list .vendor-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.vendor-list .vendor-card:hover {
+  transform: translateY(-5px);
+}
+
+.vendor-list .vendor-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vendor-list .vendor-logo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.vendor-list .vendor-content {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.vendor-list .vendor-name,
+.vendor-list .vendor-description {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin: 0;
+}
+
+.vendor-list .vendor-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  word-wrap: break-word; /* Ensures words are broken and wrapped */
+  word-break: break-word; /* Ensures long words are broken and wrapped */
+  white-space: normal; 
+}
+
+.vendor-list .vendor-description {
+  margin-top: 10px;
+  color: #666;
+  word-wrap: break-word; /* Ensures words are broken and wrapped */
+  word-break: break-word; /* Ensures long words are broken and wrapped */
+  white-space: normal; 
+}
+
+/* Vendor Image Styles */
+.vendor-list .vendor-image-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.vendor-list .vendor-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.vendor-list .vendor-card button {
+  align-self: flex-end; /* Align button to the end of the card */
+  margin-top: 10px;
+  margin-right: 10px;
+
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.10s ease;
+}
+
+.vendor-list .vendor-card button:hover {
+  background-color: #45a049;
+}
+
+.vendor-logo {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+  border: 2px solid #ccc; /* Border around image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light background for no image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.6s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+
+
+
+.vendor-logo {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
