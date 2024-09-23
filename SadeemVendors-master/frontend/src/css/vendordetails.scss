@@ -1,0 +1,359 @@
+$primary-color: #26afa8;
+$hover-darken: darken($primary-color, 10%);
+$light-bg: #f3f3f3;
+$error-color: red;
+
+.vendor-details-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .vendor-background {
+    position: relative;
+    height: 90vh; /* Adjust for larger image */
+    width: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%; /* Adjust the height of the gradient */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+      z-index: 1;
+    }
+  }
+
+  .vendor-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Ensure the image is behind the gradient overlay */
+    transition: transform 0.3s; /* Smooth transition effect */
+
+    &:hover {
+      transform: scale(1.05); /* Scale up slightly on hover */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    }
+  }
+
+  .vendor-info {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    z-index: 2;
+
+    .vendor-name {
+      font-size: 24px; /* Adjust font size */
+      font-weight: bold; /* Create visual hierarchy */
+    }
+  }
+}
+
+.page-container {
+  width: 100%;
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any padding */
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-button,
+.admin-button {
+  padding: 12px 20px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-darken; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+}
+
+.admin-input {
+  width: 20%;
+  padding: 12px;
+  border: 1px solid #E5F2F7;
+  border-radius: 8px; /* More rounded corners */
+  font-size: 16px;
+  margin-bottom: 10px;
+
+  &,
+  textarea::placeholder {
+    background-color: $light-bg;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:focus,
+  textarea:focus {
+    border-color: #3498db; /* Border color on focus */
+    box-shadow: 0 0 5px rgba(190, 229, 206, 0.2); /* Shadow on focus */
+    transform: translateY(-5px);
+  }
+}
+
+.tables-section,
+.items-section {
+  margin: 0 auto; /* Remove the margin */
+}
+
+.tables-list,
+.items-list,
+.admins-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -5px; /* Adjusted for consistency */
+}
+
+.table-item,
+.item,
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.table-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.error-message {
+  color: $error-color;
+  margin-top: 20px;
+}
+
+.table-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px; /* Padding for the card */
+  margin: 5px; /* Reduced margin for smaller gaps */
+  width: calc(30% - 10px); /* Three cards per row */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  &:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow effect */
+  }
+}
+
+/* Image Styles */
+.item-image,
+.table-image {
+  width: 80%;
+  height: 400px; /* Fixed height for uniformity */
+  object-fit: cover; /* Cover the whole area while maintaining aspect ratio */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.3s; /* Smooth image transition */
+
+  &:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+  }
+}
+
+/* Item Card Styles */
+.item-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 30px;
+  width: calc(28% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+}
+
+/* Unique Search Input Styles */
+.custom-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+
+  .custom-search-input {
+    background-color: #e0e0e0;
+    border: 1px solid #3a9c9f;
+    padding: 12px 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin: 0 auto;
+
+    &::placeholder {
+      color: #ccc;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:focus::placeholder {
+      color: #aaa;
+      transform: translateY(-10px);
+      font-size: 12px;
+    }
+  }
+}
+
+.sort-dropdown-container {
+  margin-bottom: 20px;
+
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3a9c9f;
+    background-color: #e0e0e0;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #f1f1f1;
+      border-radius: 10px;
+    }
+  }
+}
+
+.pagination-button.disabled {
+  background-color: #fff;
+  color: #333;
+  cursor: not-allowed;
+}
+
+/* Modal Styles */
+.edit-item-modal,
+.edit-table-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .edit-item-form,
+  .edit-table-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px; /* Adjust width as needed */
+    position: relative;
+    z-index: 1001;
+
+    .form-group {
+      input {
+        width: 90%; /* Adjust width as needed */
+        background-color: #f0f0f0;
+        margin-bottom: 20px;
+
+        &:focus {
+          background-color: #fafafa;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+/* Button styles for modal forms */
+.edit-table-form button,
+.edit-item-form button {
+  margin-right: 10px; /* Space between buttons */
+}
+
+/* Action Rows */
+.table-action-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 8px; /* Space between buttons */
+  margin-top: 10px; /* Add some spacing above the buttons */
+}
+
+.action-row,
+.edit-remove-row {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px; /* Space above the action row */
+  align-items: center; /* Center the buttons vertically */
+}
+
+.edit-remove-row {
+  margin-top: 15px; /* Additional spacing for clarity */
+}
+
+.add-buttons {
+  margin-top: 40px; /* Space above add buttons */
+}
+
+/* Transition Effects */
+.items-transition {
+  position: relative;
+  overflow: hidden; /* Prevent overflow during transition */
+
+  .items-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  .items-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+
+  .items-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .items-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+}
