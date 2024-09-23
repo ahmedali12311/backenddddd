@@ -1,5 +1,5 @@
 make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory 'c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendors-master/backend'
+make: Entering directory 'c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendorapp/backend'
 migrate -path=./internal/migrations -database postgres://postgres:091093Aa@localhost:5432/internship?sslmode=disable up 
-make: Leaving directory 'c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendors-master/backend'
+make: Leaving directory 'c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendorapp/backend'
  

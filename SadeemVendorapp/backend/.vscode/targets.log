@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Sep 23 13:01:15 2024
+# Make data base, printed on Mon Sep 23 13:44:33 2024
 
 # Variables
 
@@ -41,7 +41,7 @@ GOPATH = C:\Go-workspace
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_21144_WLHDVYHXHMWHTLME
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_24872_WHXOWQLBBJVPDYIU
 # environment
 FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
@@ -71,7 +71,7 @@ MAKEFLAGS = pqrR
 # environment
 ONEDRIVE = C:\Users\oG_Ju\OneDrive
 # makefile
-CURDIR := c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendors-master/backend
+CURDIR := c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendorapp/backend
 # environment
 VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 21144
+VSCODE_PID = 24872
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -137,8 +137,6 @@ PROMPT = $P$G
 # environment
 CHOCOLATEYLASTPATHUPDATE = 133710297942471203
 # environment
-GOTELEMETRY_GOPLS_CLIENT_START_TIME = 1701112850
-# environment
 LOGONSERVER = \\ELLIE
 # environment
 USERNAME = Ellie Williams
@@ -162,8 +160,6 @@ GNUMAKEFLAGS :=
 GIT_LFS_PATH = C:\Program Files\Git LFS
 # environment
 OS = Windows_NT
-# environment
-GOTELEMETRY_GOPLS_CLIENT_TOKEN = 449
 # makefile (from 'Makefile', line 1)
 MIGRATIONS_ROOT = ./internal/migrations
 # makefile
@@ -187,8 +183,6 @@ HOMEDRIVE = C:
 # environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
-GOMODCACHE = C:\Go-workspace\pkg\mod
-# environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
@@ -198,8 +192,6 @@ ELECTRON_RUN_AS_NODE = 1
 TEMP = C:\Users\oG_Ju\AppData\Local\Temp
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\2471b290-1.93.1-main-sock
-# environment
-GOPROXY = https://proxy.golang.org,direct
 # default
 .RECIPEPREFIX := 
 # automatic
@@ -221,7 +213,7 @@ CHOCOLATEYTOOLSLOCATION = C:\tools
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
 # variable set hash-table stats:
-# Load=104/1024=10%, Rehash=0, Collisions=11/134=8%
+# Load=100/1024=10%, Rehash=0, Collisions=11/130=8%
 
 # Pattern-specific Variable Values
 
@@ -229,7 +221,7 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 3, GenuineIntel
 
 # Directories
 
-# . (key c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendors-master/backend, mtime 1726607942): 12 files, no impossibilities.
+# . (key c:/Users/oG_Ju/OneDrive/Desktop/SadeemVendorapp/backend, mtime 1726607942): 12 files, no impossibilities.
 
 # 12 files, no impossibilities in 1 directories.
 
@@ -327,6 +319,6 @@ migrate.up:
 # strcache performance: lookups = 39 / hit rate = 43%
 # hash-table stats:
 # Load=22/8192=0%, Rehash=0, Collisions=0/39=0%
-# Finished Make data base on Mon Sep 23 13:01:15 2024
+# Finished Make data base on Mon Sep 23 13:44:33 2024
 
  

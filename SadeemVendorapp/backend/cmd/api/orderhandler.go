@@ -174,7 +174,7 @@ func (app *application) GetUserOrders(w http.ResponseWriter, r *http.Request) {
 	// Retrieve the orders for the customer on the specific table
 	orders, err := app.Model.OrderDB.GetOrders(customerID, table.ID)
 	if err != nil {
-		app.serverErrorResponse(w, r, err)
+		app.handleRetrievalError(w, r, err)
 		return
 	}
 
